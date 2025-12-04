@@ -49,7 +49,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: flex-start;
-            padding: 0 15px 20px 15px;
+            padding: 0 15px 20px 15px; /* Keep your padding */
             width: 100%;
             max-width: 480px;
             margin: 0 auto;
@@ -79,7 +79,7 @@
             position: relative;
             width: 100%;
             max-width: 280px; 
-            aspect-ratio: 5/6; /* 500x600 Ratio */
+            aspect-ratio: 5/6; /* Keep your 5:6 ratio */
             margin-bottom: 15px;
             display: flex;
             justify-content: center;
@@ -128,7 +128,7 @@
             filter: brightness(0.7); 
         }
 
-        /* --- BADGES (Only visible on active card) --- */
+        /* --- BADGES (Added "Opacity Fix" so S8+ doesn't look messy) --- */
         .badge {
             position: absolute; top: 10px; left: 10px;
             background: rgba(0,0,0,0.7); backdrop-filter: blur(4px);
@@ -140,6 +140,7 @@
             opacity: 0; /* Hidden by default */
             transition: opacity 0.3s ease;
         }
+        /* Only show on active card */
         .card.active .badge { opacity: 1; }
 
         .dot-green { width: 6px; height: 6px; background: #00e676; border-radius: 50%; box-shadow: 0 0 4px #00e676; }
@@ -172,7 +173,7 @@
 
         .carousel-wrapper.interacted .tap-hand { display: none !important; animation: none; }
 
-        /* Images - USING NEW NAMES: photo1.jpg */
+        /* Images - UPDATED TO NEW NAMES: photo1.jpg */
         #c0 { background-image: url('photo1.jpg'); }
         #c1 { background-image: url('photo2.jpg'); }
         #c2 { background-image: url('photo3.jpg'); }
